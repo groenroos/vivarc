@@ -60,7 +60,10 @@
   min-height: 0;
   contain: inline-size;
   box-sizing: border-box;
-  overflow: hidden;
+  /* The favorites grid sits at the very top of the panel: the clip margin lets a hovered glass tile, which lifts, grows
+     (with a springy overshoot) and casts a shadow, paint past the panel's top edge instead of being cut off there. */
+  overflow: clip;
+  overflow-clip-margin: 12px;
   padding: 0 8px 6px;
   font-size: 13.5px;
   user-select: none;
